@@ -10,3 +10,6 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: cumulative_orders_by_date
+    description: "The cumulative orders by date"
