@@ -8,5 +8,5 @@ WHERE
     d_date <= current_date
 
 {% if is_incremental() %}
-    and d_date > (selext max(d_date) from {{ this }})
+    and d_date > (SELECT MAX(d_date) FROM {{ this }})
 {% endif %}

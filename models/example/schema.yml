@@ -13,3 +13,12 @@ models:
 
   - name: cumulative_orders_by_date
     description: "The cumulative orders by date"
+
+  - name: datesIncremental
+    description: "dates table as incremental table"
+  
+  - name: ephemeral_model_dbt
+    description: "The first dbt table as ephemeral"
+
+  - name: second_dbt_table
+    description: "The second dbt table that refs ephemeral"
