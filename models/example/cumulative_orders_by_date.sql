@@ -1,5 +1,3 @@
-{{ config(materialized = 'table') }}
-
 SELECT
     o_orderdate AS date,
     o_totalprice AS price,
