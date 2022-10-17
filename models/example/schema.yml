@@ -2,6 +2,26 @@
 version: 2
 
 models:
+  - name: ephemeral_model_dbt
+    description: "wow"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+              
+  - name: newmodel
+    description: 'test model'
+    columns:
+      - name: c_custkey
+        tests:
+          - not_null
+          - unique
+      - name: c_mktsegment
+        tests:
+          - accepted_values:
+              values: ['BUILDING' ,'AUTOMOBILE', 'MACHINERY', 'HOUSEHOLD', 'FURNITURE']
+
   - name: snowflake_customer_purchases
     description: "The total purchases of each customer"
     columns:
@@ -16,9 +36,6 @@ models:
 
   - name: datesIncremental
     description: "dates table as incremental table"
-  
-  - name: ephemeral_model_dbt
-    description: "The first dbt table as ephemeral"
 
   - name: second_dbt_table
     description: "The second dbt table that refs ephemeral"
