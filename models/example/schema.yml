@@ -22,3 +22,6 @@ models:
 
   - name: second_dbt_table
     description: "The second dbt table that refs ephemeral"
+
+  - name: t_time
+    description: "The second dbt table that use incremental"
