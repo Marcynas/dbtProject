@@ -34,9 +34,6 @@ models:
   - name: cumulative_orders_by_date
     description: "The cumulative orders by date"
 
-  - name: datesIncremental
-    description: "dates table as incremental table"
-
   - name: second_dbt_table
     description: "The second dbt table that refs ephemeral"
 

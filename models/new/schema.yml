@@ -1,0 +1,6 @@
+
+version: 2
+
+models:
+  - name: datesIncremental
+    description: "dates table as incremental table"
