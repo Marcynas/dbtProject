@@ -39,3 +39,27 @@ models:
 
   - name: t_time
     description: "The second dbt table that use incremental"
+
+sources:
+  - name: sample
+    database: snowflake_sample_data
+    schema: tpch_sf1
+    tables:
+      - name: customer
+        columns:
+          - name: c_custkey
+            test:
+              - unique
+              - not_null
+      - name: orders
+  - name: sample2
+    database: snowflake_sample_data
+    schema: TPCH_SF100
+    tables:
+      - name: customer
+  - name: sample3
+    database: snowflake_sample_data
+    schema: TPCDS_SF10TCL
+    tables:
+      - name: TIME_DIM
+      

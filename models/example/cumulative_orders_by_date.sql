@@ -6,4 +6,4 @@ SELECT
             o_orderdate
     ) AS cumulativesum
 FROM
-    "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."ORDERS"
+    {{ source('sample','orders') }}

@@ -1,5 +1,5 @@
 {{ config(materialized='table') }}
 
 SELECT *
-FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.CUSTOMER
+FROM {{ source('sample2','customer') }}
 WHERE c_custkey IS NOT NULL
