@@ -49,3 +49,4 @@ models:
     example:
       +materialized: table
       +pre-hook: "insert into dbt.audit (model,state,time) values ('{{this.name}}','starting model deplyment',current_timestamp)"
+      +tags: "nightly"
