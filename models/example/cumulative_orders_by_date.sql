@@ -1,3 +1,8 @@
+with orders as (
+    SELECT *
+    FROM {{ source('sample','orders') }}
+)
+
 SELECT
     o_orderdate AS date,
     o_totalprice AS price,
@@ -6,4 +11,4 @@ SELECT
             o_orderdate
     ) AS cumulativesum
 FROM
-    {{ source('sample','orders') }}
+    orders

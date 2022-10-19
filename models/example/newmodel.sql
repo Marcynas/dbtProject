@@ -1,5 +1,11 @@
 {{ config(materialized='table') }}
 
+with customer as (
+    SELECT *
+    FROM {{ source('sample2','customer') }}
+)
+
+
 SELECT *
-FROM {{ source('sample2','customer') }}
+FROM customer
 WHERE c_custkey IS NOT NULL
