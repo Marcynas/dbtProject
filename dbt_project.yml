@@ -29,6 +29,8 @@ vars:
   my_second_variable: 2020
   my_third_variable: 1
 
+on-run-start:
+    - 'create table if not exists analytics.dbt.audit (model text, state text, time timestamp_ltz)'
 
 on-run-end:
     - 'grant usage on schema analytics.dbt to role analyst'
@@ -46,3 +48,4 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: table
+      
